@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+<html>
+    {% block head %}
+    <head>
+    <title>Attendance Table</title>
+    <link rel="icon" href="/static/logo.png" type="image/x-icon">
+    <style>
+        body {
+        font-family: Product Sans, sans-serif;
+        background-image: url("static/nnpc_waves.png");
+        background-size: contain;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        }
+        #myTable {
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        }
+        #myTable td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 75px;
+        width: 75px;
+        text-align: center;
+        }
+        #occupied {
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        }
+    </style>
+    </head>
+    {% endblock %}
+    <body>
+    {% block content %}
+    <table id="myTable">
+        {% for i in range(0, 100, 10) %}
+        <tr>
+            {% for j in range(10) %}
+                {% if attendees[i + j] == '-' %}
+                    <td>  {{ i + j }} <br> {{ attendees[i + j] }}  </td>
+                {% else %}
+                    <td id="occupied">  {{ i + j }} <br> {{ attendees[i + j].split()[0] }}  </td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+    </body>
+    </html>

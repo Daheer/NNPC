@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+<html>
+    {% block head %}
+        <head>
+        <title>NNPC Attendance Sign In</title>
+        <link rel="icon" href="/static/logo.png" type="image/x-icon">
+        <style>
+            body {
+            display: flex;
+            background-image: url("static/nnpc_waves.png"); 
+            background-size: contain;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            }
+            .button-container {
+            text-align: center;
+            }
+            .button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-family: Product Sans, sans-serif;
+            margin: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            }
+        </style>
+        </head>
+        {% endblock %}
+        <body> 
+        {% block content %}
+        <div class="button-container">
+            <img height="200px" width="339px" src="static/logo_with_white_text.png" alt="NNPC Logo"/>
+            <br><br><br>
+            <form action="/sign_in" method="GET">
+                <button type="submit" class="button">Sign In</button>
+            </form>
+            <form action="/table" method="GET">
+                <button class="button">View Table</button>
+            </form>
+        </div>
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+        </body>
+</html>

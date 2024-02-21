@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>NNPC Chatbot</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="../static/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+</head>
+
+<body>
+
+  <body>
+    <div class="card">
+      <div id="header">
+        <h1> Hi there 👋🏾 <img src="../static/logo.png" height="38" width="32" /></h1>
+      </div>
+      <div id="message-section">
+        <div class="message" id="bot"><span id="bot-response">Welcome to our website. Ask us anything 🎉</span></div>
+        <div class="message" id="bot"><span id="bot-response">We typically reply within 1-2 minutes</span></div>
+      </div>
+      <div id="input-section">
+        <input id="input" type="text" placeholder="Enter your message..." autocomplete="off" autofocus="autofocus" />
+        <button class="send" onclick="sendMessage()">
+          <div class="circle"><i id="normal-send" class="zmdi zmdi-mail-send"></i></div>
+          <img src="../static/pulse-loading.gif" id="pulse-loading" />
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
