@@ -20,12 +20,12 @@ async function output(input) {
   document.getElementById("pulse-loading").style.display = 'flex';
   document.getElementById("normal-send").style.display = 'none';
 
-  await fetch('https://5aca-34-66-174-126.ngrok-free.app/', {
+  await fetch('https://XXXXXXXXX.ngrok-free.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ message: input, use_openai: false, api_key: "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" }),
+    body: JSON.stringify({ message: input, use_openai: false, api_key: "sk-XXXXXXXXXXXXXXXX" }),
   })
     .then(response => response.json())
     .then(data => {
