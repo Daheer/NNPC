@@ -19,34 +19,35 @@ The Chatbot can be powered by either LLaMA or OpenAI's GPT 3.5.
 - For LLaMA 2, ensure that your environment is using a GPU-runtime.
 - For OpenAI, ensure that you have a valid OpenAI key.
 
-> Install all dependencies
+1. Install all dependencies
 
 ```bash
 pip install nltk fastapi openai uvicorn pyngrok gradio unstructured gdown PyPDF2 sentence_transformers chromadb git+https://github.com/huggingface/transformers.git@refs/pull/25740/head accelerate tqdm
 ```
 
-> Configure ngrok
+2. Configure ngrok
 
 ```bash
 ngrok config add-authtoken XXXXXXXXXXXX
 ```
 
-> Get free public link for your app
+3. Get free public link for your app
 
 ```bash
 python -c "from pyngrok import ngrok; ngrok.connect(8000)"
 ```
 
-> Run app
+4. Run app
+
 ```bash
 python app.py
 ```
 
-> Replace the url in line 23 in [script.js](trial/script.js) with the public url gotten from `ngrok`. 
+5. Replace the url in line 23 in [script.js](trial/script.js) with the public url gotten from `ngrok`. 
 
-> (Optional) Paste your OpenAI API key in line 28 in [script.js](trial/script.js)
+6. (Optional) Paste your OpenAI API key in line 28 in [script.js](trial/script.js)
 
-> Open [trial/index.html](trial/index.html) in your browser
+7. Open [trial/index.html](trial/index.html) in your browser
 
 # Usage
 
